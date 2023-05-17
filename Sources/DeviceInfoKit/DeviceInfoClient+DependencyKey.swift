@@ -3,11 +3,12 @@ import Foundation
 
 extension DeviceInfoClient: DependencyKey {
     public static let liveValue = DeviceInfoClient(
-        info: { device in
+        info: { device, locale in
             await DeviceInfo(
                 osNameString: await device.systemName,
                 osVersionString: await device.systemVersion,
-                deviceModelString: device.model
+                deviceModelString: device.model,
+                locale: locale.language.languageCode?.identifier
             )
         }
     )
