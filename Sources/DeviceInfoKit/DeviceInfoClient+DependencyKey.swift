@@ -7,7 +7,7 @@ extension DeviceInfoClient: DependencyKey {
             await DeviceInfo(
                 osNameString: await device.systemName,
                 osVersionString: await device.systemVersion,
-                deviceModelString: device.model,
+                deviceModelString: device.modelName,
                 localeIdentifier: locale.identifier
             )
         }
