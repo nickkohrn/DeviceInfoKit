@@ -1,16 +1,16 @@
 import Foundation
 
 public struct DeviceInfo: Equatable {
-    public var osNameString: String
-    public var osVersionString: String
-    public var deviceModelString: String
-    public var locale: String?
+    public let osNameString: String
+    public let osVersionString: String
+    public let deviceModelString: String
+    public let locale: String
 
     public init(
         osNameString: String = "",
         osVersionString: String = "",
         deviceModelString: String = "",
-        locale: String? = nil
+        locale: String = ""
     ) {
         self.osNameString = osNameString
         self.osVersionString = osVersionString
